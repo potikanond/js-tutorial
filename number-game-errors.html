@@ -48,7 +48,7 @@
   var guessCount = 1;
   var resetButton;
   console.log(randomNumber);
-  
+
   function checkGuess() {
  
     var userGuess = Number(guessField.value);
@@ -92,7 +92,8 @@
   
   function resetGame() {
 	  guessCount = 1;
-	
+  
+    // get all <p></p> elements in <div class="resultParas">...</div>
 	  var resetParas = document.querySelectorAll('.resultParas p');
 	  for(var i = 0; i < resetParas.length; i++) {
 		  resetParas[i].textContent = '';
