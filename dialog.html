@@ -1,0 +1,46 @@
+<html>
+    <head>
+       
+    </head>
+    <body>
+       <p>Click the following button to see the result: </p>
+       
+       <form>
+          <input type="button" value="Alert Me" onclick="Warn();" />
+          <input type="button" value="Confirm Me" onclick="getConfirmation();" />
+          <input type="button" value="Prompt Me" onclick="getValue();" />
+       </form>
+
+       <p id="message"></p>
+        
+        <script type="text/javascript">
+            var msg = '';
+            function Warn() {
+                alert ("This is a warning message!");
+                msg = "This is a warning message!";
+                document.getElementById("message").textContent = msg;
+            }
+
+            function getConfirmation(){
+               var retVal = confirm("Do you want to continue ?");
+               if( retVal == true ){
+                    msg = "User wants to continue!";
+                    document.getElementById("message").textContent = msg;
+                    return true;
+               }
+               else{
+                    msg = "User does not want to continue!";
+                    document.getElementById("message").textContent = msg;
+                    return false;
+               }
+            }
+
+            function getValue(){
+                var retVal = prompt("Enter your name : ", "your name here");
+                msg = "You have entered : " + retVal;
+                document.getElementById("message").textContent = msg;
+            }
+
+        </script>
+    </body>
+ </html>

@@ -1,0 +1,51 @@
+<!-- cookie values: expires, domain, path, secure, name=value -->
+<html>
+    <head>
+       
+       <script type = "text/javascript">
+          
+            function WriteCookie()
+            {
+                if( document.myform.customer.value == "" ){
+                   alert("Enter some value!");
+                   return;
+                }
+                cookievalue= escape(document.myform.customer.value) + ";";
+                document.cookie="name=" + cookievalue;
+                var msg = "Setting Cookies : " + "name=" + cookievalue;
+                document.getElementById("message").textContent = msg;
+            }
+
+            function ReadCookie()
+            {
+               var allcookies = document.cookie;
+               
+               // Get all the cookies pairs in an array
+               cookiearray = allcookies.split(';');
+               var msg = 'All cookies: \n';
+               // Now take key value pair out of this array
+               for(var i=0; i<cookiearray.length; i++){
+                  name = cookiearray[i].split('=')[0];
+                  value = cookiearray[i].split('=')[1];
+                  msg += "Key is : " + name + " and Value is : " + value;
+               }
+
+               document.getElementById("message").textContent = msg;
+            }
+
+       </script>
+       
+    </head>
+    
+    <body>
+    
+       <form name="myform" action="">
+          Enter name: <input type="text" name="customer"/>
+          <input type="button" value="Set Cookie" onclick="WriteCookie();"/>
+          <input type="button" value="Get Cookie" onclick="ReadCookie();"/>          
+        </form>
+
+        <p id="message"></p>
+    
+    </body>
+ </html>

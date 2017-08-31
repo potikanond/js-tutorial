@@ -1,0 +1,31 @@
+<html>
+    <head>
+    
+       <script type="text/javascript">
+            function getValue(){
+               var a,b,c;
+               
+               a = void ( b = 5, c = 7 );
+               document.write('a = ' + a + ' b = ' + b +' c = ' + c );
+            }
+       </script>
+       
+    </head>
+    <body>
+    
+       <p>Click the following, This won't react at all...</p>
+       <a href="javascript:void(alert('Warning!!!'))">Click me!</a><br>
+       <a href="javascript:alert('Warning!!!')">Click me!</a><br>
+       <a href="javascript:void(0))">Click me!</a><br>
+       <input type="button" value="Click Me" onclick="getValue();" /><br>
+
+        <a href="javascript:void(0);">
+            Click here to do nothing
+        </a><br>
+      
+        <a href="javascript:void(document.body.style.backgroundColor='green');">
+            Click here for green background
+        </a>
+       
+    </body>
+ </html>

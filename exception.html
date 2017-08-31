@@ -1,0 +1,41 @@
+<html>
+    
+    <head>
+    </head>
+    
+    <body>
+       <p>Click the following to see the result:</p>
+       
+       <form>
+          <input type="button" value="Click Me" onclick="myFunc();" /><br><br>
+          <input type="button" value="Call non existing function" onclick="myFunc1();" />
+       </form>
+       
+       <script type="text/javascript">
+
+            window.onerror = function() {
+                alert("An error occured.");
+            }
+            
+            function myFunc()
+            {
+                var a = 100, b=0;
+                
+                try {
+                    alert("Value of variable a is : " + a );
+                    if (b === 0) {
+                        throw ("Devided by zero error.");
+                    }
+                }
+                
+                catch ( e ) {
+                    alert("Error: " + e);
+                }
+                
+                finally {
+                    alert("Finally block will always execute!" );
+                }
+            }
+        </script>
+    </body>
+ </html>

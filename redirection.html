@@ -1,0 +1,46 @@
+<html>
+    <head>
+       
+       <script type="text/javascript">
+          
+            /*   redirect after a period of time */
+            // function Redirect() {
+            //     window.location="http://mango.cpe.eng.cmu.ac.th";
+            // }
+
+            // document.write("You will be redirected to main page in 3 sec.");
+            // setTimeout('Redirect()', 3000);
+          
+            /* redirect based on browser */
+            var browsername=navigator.appName;
+            document.write("You are using " + browsername);
+            setTimeout('Redirect()', 10000);
+
+            if( browsername == "Netscape" )
+            {
+                window.location="http://mango.cpe.eng.cmu.ac.th";
+            }
+            else if ( browsername =="Microsoft Internet Explorer")
+            {
+                window.location="http://www.eng.cmu.ac.th";
+            }
+            else
+            {
+                window.location="http://www.cpe.eng.cmu.ac.th";
+            }
+
+            
+
+       </script>
+       
+    </head>
+    
+    <body>
+       <!-- <p>Click the following button, you will be redirected to home page.</p>
+       
+       <form>
+          <input type="button" value="Redirect Me" onclick="Redirect();" />
+       </form> -->
+       
+    </body>
+ </html
