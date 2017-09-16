@@ -45,8 +45,11 @@
     
         <script type="text/javascript">
 
+        // If an error occur! 
         window.onerror = function() { alert("An error occured."); }
+
         function validate() {
+            // myForm: the 'name' attribute of the form
             if( document.myForm.Name.value == "" )
             {
                 alert( "Please provide your name!" );
@@ -75,6 +78,7 @@
                 alert( "Please provide your country!" );
                 return false;
             }
+            
             return( true );
         }
         
