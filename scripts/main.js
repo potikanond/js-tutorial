@@ -1,5 +1,5 @@
 var myHeading = document.querySelector('h1');
-myHeading.textContent = 'Hello World Dome!!!'
+myHeading.textContent = 'Hello World Students!!!'
 
 var subtitle = document.getElementById('subtitle');
 subtitle.textContent = subtitle.textContent + ' ...';
@@ -31,15 +31,20 @@ var myHeading = document.querySelector('h1');
 
 function setUserName() {
     var myName = prompt('Enter your name.');
+
+    if(myName === null || myName == '') {
+      return;
+    }
+
     localStorage.setItem('name', myName);
-    myHeading.textContent = 'Mozilla is cool, ' + myName;
+    myHeading.textContent = myName + ", You're cool.";
 }
 
 if(!localStorage.getItem('name')) {
     setUserName();
 } else {
     var storedName = localStorage.getItem('name');
-    myHeading.textContent = storedName;
+    myHeading.textContent = 'Hi ' + storedName;
 }
 
 myButton.onclick = function() {
